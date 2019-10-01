@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import PokemonBox from "./Components/PokemonBox/PokemonBox";
+import LoadScreen from "./Components/LoadScreen/LoadScreen";
 
 
 class App extends Component {
@@ -20,15 +22,15 @@ class App extends Component {
             isLoading: false,
             items: [...data.results]
         });
-        console.log(this.state.items[0]);
     }
 
     render() {
         return(
             <div>
                 {this.state.isLoading ?
-                    <div>loading</div> :
-                    <div>{this.state.items[0].name}</div>}
+                    <LoadScreen /> :
+                    <PokemonBox />
+                }
             </div>
         );
     }
