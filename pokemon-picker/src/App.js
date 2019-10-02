@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-// import PokemonBox from "./Components/PokemonBox/PokemonBox";
+import PokemonBox from "./Components/PokemonBox/PokemonBox";
 import LoadScreen from "./Components/LoadScreen/LoadScreen";
 
 
@@ -15,6 +15,11 @@ class App extends Component {
     }
 
     componentDidMount() {
+        // const range = [...Array(9).keys()];
+        // const url = [];
+        // range.map(number => url.push('https://pokeapi.co/api/v2/pokemon/'+ (number+1)));
+
+
         fetch('https://pokeapi.co/api/v2/pokemon?limit=9')
             .then(res => res.json())
             .then((result) => {
@@ -38,12 +43,13 @@ class App extends Component {
     }
 
     render() {
-        // const pokemonNames = this.state.items;
+        const pokemons = this.state.items;
+
         return(
             <div>
                 {this.state.isLoading ?
                     <LoadScreen /> :
-                    <div>data</div>
+                    <PokemonBox pokemons={pokemons}/>
                 }
             </div>
         );
