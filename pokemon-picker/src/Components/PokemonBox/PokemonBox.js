@@ -1,10 +1,10 @@
 import React from 'react';
 
 function PokemonBox({pokemons}) {
+
     return pokemons.map((pokemon, index) => (
-        <div>
-            <p>{pokemon.name}</p>
-            <p>{pokemon.imgUrl}</p>
+        <div key={index}>
+            <img src={pokemon.imgUrl} alt={pokemon.name} width='200'/>
         </div>
     ))
 }
