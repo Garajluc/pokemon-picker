@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class PokemonBox extends Component {
-    render() {
-        return(
-            <div>pokemon Box</div>
-        );
-    }
+function PokemonBox({pokemons}) {
+    return pokemons.map((pokemon, index) => (
+        <p key={index}>{pokemon.name}</p>
+    ))
 }
 
 export default PokemonBox;

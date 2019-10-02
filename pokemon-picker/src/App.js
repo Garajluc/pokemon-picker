@@ -25,11 +25,13 @@ class App extends Component {
     }
 
     render() {
+        const pokemons = this.state.items;
+
         return(
             <div>
                 {this.state.isLoading ?
                     <LoadScreen /> :
-                    <PokemonBox />
+                    <PokemonBox pokemons={pokemons}/>
                 }
             </div>
         );
