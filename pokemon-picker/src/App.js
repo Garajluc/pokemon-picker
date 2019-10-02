@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import PokemonBox from "./Components/PokemonBox/PokemonBox";
+// import PokemonBox from "./Components/PokemonBox/PokemonBox";
 import LoadScreen from "./Components/LoadScreen/LoadScreen";
 
 
@@ -14,24 +14,36 @@ class App extends Component {
         }
     }
 
-    async componentDidMount() {
-        const url = 'https://pokeapi.co/api/v2/pokemon?limit=9';
-        const response = await fetch(url);
-        const data = await response.json();
-        this.setState({
-            isLoading: false,
-            items: [...data.results]
-        });
+    componentDidMount() {
+        fetch('https://pokeapi.co/api/v2/pokemon?limit=9')
+            .then(res => res.json())
+            .then((result) => {
+                const url =result.results.map(res => {
+                    return res.url
+                });
+
+                Promise.all([...url].map((url) =>
+                    fetch(url)
+                        .then(res => res.json())
+                ))
+                    .then(res => {
+                        this.setState({
+                            isLoading: false,
+                            items: [...res].map(res => {
+                                return { 'name': res.species.name, 'imgUrl': res.sprites.front_default}
+                            })
+                        });
+                    })
+            })
     }
 
     render() {
-        const pokemons = this.state.items;
-
+        // const pokemonNames = this.state.items;
         return(
             <div>
                 {this.state.isLoading ?
                     <LoadScreen /> :
-                    <PokemonBox pokemons={pokemons}/>
+                    <div>data</div>
                 }
             </div>
         );
