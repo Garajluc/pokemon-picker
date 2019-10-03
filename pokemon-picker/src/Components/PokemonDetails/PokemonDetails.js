@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 class PokemonDetails extends Component {
     render() {
@@ -8,9 +7,7 @@ class PokemonDetails extends Component {
             <div>
                 <div>{state.name}</div>
                 <img src={state.imgUrl} alt={state.name}/>
-                <button>
-                    <Link to={{ pathname: '/'}}>Back</Link>
-                </button>
+                <button onClick={() => this.props.history.goBack()}>Back</button>
             </div>
         );
     }
