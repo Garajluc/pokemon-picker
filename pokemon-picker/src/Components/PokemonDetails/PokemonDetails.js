@@ -6,7 +6,8 @@ class PokemonDetails extends Component {
         return(
             <div>
                 <div>{state.name}</div>
-                <img src={state.imgUrl} alt="{state.name}"/>
+                <img src={state.imgUrl} alt={state.name}/>
+                <button onClick={() => this.props.history.goBack()}>Back</button>
             </div>
         );
     }
