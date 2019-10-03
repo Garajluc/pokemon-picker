@@ -14,7 +14,7 @@ function PokemonBox({pokemons}) {
                     }
                 }}
                 >
-                    <img className="photo__img photo__img--scaled" src={pokemon.imgUrl} alt={pokemon.name}/>
+                    <img className="photo__img photo__img-shadow photo__img-medium photo__img--scaled" src={pokemon.imgUrl} alt={pokemon.name}/>
                 </Link>
             </figure>
         </div>

@@ -46,10 +46,21 @@ class App extends Component {
         const pokemons = this.state.items;
 
         return(
-            <section className="section section-list flex">
+            <section>
+                {/*<div className="section section-header">*/}
+                {/*    <h1 className="header-large">Select your favourite pokemon</h1>*/}
+                {/*</div>*/}
                 {this.state.isLoading ?
-                    <LoadScreen /> :
-                    <PokemonBox pokemons={pokemons}/>
+                    <div className="">
+                        <div className="section section-load flex">
+                            <LoadScreen />
+                        </div>
+                    </div> :
+                    <div className="">
+                        <div className="section section-list flex">
+                            <PokemonBox pokemons={pokemons}/>
+                        </div>
+                    </div>
                 }
             </section>
         );
