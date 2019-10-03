@@ -5,6 +5,7 @@ function PokemonBox({pokemons}) {
 
     return pokemons.map((pokemon, index) => (
         <div key={index}>
+            <div>Henlo Test</div>
             <img src={pokemon.imgUrl} alt={pokemon.name} width='200'/>
             <button>
                 <Link to={{
