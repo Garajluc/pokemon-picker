@@ -7,8 +7,8 @@ import PokemonDetails from "./PokemonDetails/PokemonDetails";
 const Router = () => (
     <BrowserRouter>
         <Switch>
-            <Route path="/" component={App} exact/>
-            <Route path="/pokemon" component={PokemonDetails}/>
+            <Route path="/" component={App} exact />
+            <Route path="/pokemon/:id" component={PokemonDetails}/>
         </Switch>
     </BrowserRouter>
 );
