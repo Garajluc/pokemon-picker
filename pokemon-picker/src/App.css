@@ -1,3 +1,52 @@
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
 
+.section {
+  min-height: 100vh; }
+
+.section__header {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center; }
+  .section__header::first-letter {
+    text-transform: uppercase; }
+
+.section-list__item {
+  min-width: 450px;
+  margin: 50px 0; }
+
+.btn--back {
+  margin-top: 50px;
+  background: none;
+  border: none; }
+
+.btn {
+  font-size: 18px; }
+  .btn .btn__icon {
+    margin-right: 10px; }
+  .btn:hover {
+    cursor: pointer;
+    color: #5acdbd;
+    transition: all .15s ease-in; }
+  .btn:focus {
+    outline: none; }
+
+.photo {
+  margin: 0;
+  text-align: center; }
+  .photo .photo__img {
+    width: 200px; }
+  .photo .photo__img-big {
+    width: 350px; }
+  .photo .photo__img--scaled {
+    transform: scale(1);
+    transition: transform 500ms; }
+    .photo .photo__img--scaled:hover {
+      transform: scale(1.2);
+      cursor: pointer; }
 
 /*# sourceMappingURL=App.css.map */

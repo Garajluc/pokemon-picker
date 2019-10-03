@@ -4,18 +4,19 @@ import { Link } from 'react-router-dom';
 function PokemonBox({pokemons}) {
 
     return pokemons.map((pokemon, index) => (
-        <div key={index}>
-            <div>Henlo Testt</div>
-            <img src={pokemon.imgUrl} alt={pokemon.name} width='200'/>
-            <button>
-                <Link to={{
+        <div className="section-list__item" key={index}>
+            <figure className="photo">
+                <Link className="section--list__link" to={{
                     pathname: `/pokemon/${index+1}`,
                     state: {
                         'name': pokemon.name,
                         'imgUrl': pokemon.imgUrl
                     }
-                }}>Show Details</Link>
-            </button>
+                }}
+                >
+                    <img className="photo__img photo__img--scaled" src={pokemon.imgUrl} alt={pokemon.name}/>
+                </Link>
+            </figure>
         </div>
     ))
 }

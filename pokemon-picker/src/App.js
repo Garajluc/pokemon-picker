@@ -46,12 +46,12 @@ class App extends Component {
         const pokemons = this.state.items;
 
         return(
-            <div>
+            <section className="section section-list flex">
                 {this.state.isLoading ?
                     <LoadScreen /> :
                     <PokemonBox pokemons={pokemons}/>
                 }
-            </div>
+            </section>
         );
     }
 }
