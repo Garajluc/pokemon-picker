@@ -93,7 +93,6 @@ $btn-hover-color: #5acdbd;
 }
 
 .photo__img-rotate {
-  -webkit-animation: rotation 2s infinite linear;
   animation: rotation 2s infinite linear;
 }
 
@@ -106,4 +105,14 @@ $btn-hover-color: #5acdbd;
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
+}
+
+.photo-delayVisibility {
+  animation: delayVisibility 1s linear;
+}
+
+@keyframes delayVisibility {
+  0%   { opacity:0; }
+  99%  { opacity:0; }
+  100% { opacity:1; }
 }
