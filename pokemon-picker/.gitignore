@@ -21,3 +21,11 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# othes
+.idea
+
+# css
+./src/App.scss/App.css
+./src/App.scss/App.css.map
+
