@@ -26,6 +26,6 @@ yarn-error.log*
 ../.idea
 
 # css
-/src/App.scss/App.css
-/src/App.scss/App.css.map
+src/App.css
+src/App.css.map
 
