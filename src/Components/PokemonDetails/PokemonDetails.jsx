@@ -14,8 +14,8 @@ class PokemonDetails extends Component {
     }
 
     async componentDidMount() {
-        const id = this.props.match.params.id;
-        const pokemon = await fetchPokemon(id);
+        const { id } = this.props.match.params;
+        const pokemon = await fetchPokemon(parseInt(id)+1);
 
         this.setState({
             pokemon: {
