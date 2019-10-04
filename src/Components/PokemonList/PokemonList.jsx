@@ -36,13 +36,7 @@ class PokemonList extends React.Component {
                     <div className="section-list flex">
                         {pokemons.map((pokemon, index) => (
                             <div className="section-list__item" key={index}>
-                                <Link className="section-list__link" to={{
-                                    pathname: `/pokemon/${index + 1}`,
-                                    state: {
-                                        'name': pokemon.name,
-                                        'imgUrl': pokemon.sprite
-                                    }
-                                }}>
+                                <Link className="section-list__link" to={{pathname: `/pokemon/${index}`}}>
                                     <figure className="photo">
                                         <img className="photo__img photo__img-shadow photo__img-medium photo__img--scaled"
                                              src={pokemon.sprite} alt={pokemon.name}/>

@@ -1,10 +1,32 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import fetchPokemon from './PokemonDetailService';
 
 class PokemonDetails extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            pokemon: []
+        }
+    }
+
+    async componentDidMount() {
+        const id = this.props.match.params.id;
+        const pokemon = await fetchPokemon(id);
+
+        this.setState({
+            pokemon: {
+                name: pokemon.species.name,
+                sprite: pokemon.sprites.front_default,
+            }
+        });
+    }
+
+
     render() {
-        const state = this.props.location.state;
         return(
             <div className="section">
                 <div className="section-detail">
@@ -14,10 +36,10 @@ class PokemonDetails extends Component {
                         </button>
                     </nav>
                     <div className="header">
-                        <h1>{state.name}</h1>
+                        <h1>{this.state.pokemon.name}</h1>
                     </div>
                     <figure className="photo">
-                        <img className="photo__img photo__img-big" src={state.imgUrl} alt={state.name}/>
+                        <img className="photo__img photo__img-big" src={this.state.pokemon.sprite} alt={this.state.pokemon.name}/>
                     </figure>
                 </div>
             </div>
