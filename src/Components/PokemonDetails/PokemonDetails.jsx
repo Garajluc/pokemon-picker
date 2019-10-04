@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
-import fetchPokemon from './PokemonDetailService';
+import { fetchPokemon } from './PokemonDetailService';
 
 class PokemonDetails extends Component {
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LoadScreen from "../LoadScreen";
-import fetchPokemons from './PokemonListService'
+import { fetchPokemons } from './PokemonListService'
 
 class PokemonList extends React.Component {
 

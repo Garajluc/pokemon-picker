@@ -1,4 +1,4 @@
-function fetchPokemons() {
+export function fetchPokemons() {
     return fetch('https://pokeapi.co/api/v2/pokemon?limit=9')
         .then(response => response.json())
         .then(pokemonList => {
@@ -11,5 +11,3 @@ function fetchPokemons() {
             return Promise.all(pokemonPromises);
         });
 }
-
-export default fetchPokemons;
