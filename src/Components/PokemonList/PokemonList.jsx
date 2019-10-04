@@ -6,6 +6,7 @@ class PokemonList extends React.Component {
 
     constructor(props) {
         super(props);
+
         this.state = {
             isLoading: true,
             items: []
@@ -40,9 +41,7 @@ class PokemonList extends React.Component {
 
         return (
             this.state.isLoading ?
-                <div>
-                    <LoadScreen />
-                </div> :
+                <LoadScreen /> :
                 <div className="section">
                     <div className="section-list flex">
                         {pokemons.map((pokemon, index) => (
