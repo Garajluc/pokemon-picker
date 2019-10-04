@@ -43,23 +43,26 @@ class PokemonList extends React.Component {
                 <div>
                     <LoadScreen />
                 </div> :
-                <div className="section flex">
-                    {pokemons.map((pokemon, index) => (
-                        <div className="section-list__item" key={index}>
-                            <figure className="photo">
-                                <Link className="section--list__link" to={{
+                <div className="section">
+                    <div className="section-list flex">
+                        {pokemons.map((pokemon, index) => (
+                            <div className="section-list__item" key={index}>
+                                <Link className="section-list__link" to={{
                                     pathname: `/pokemon/${index + 1}`,
                                     state: {
                                         'name': pokemon.name,
                                         'imgUrl': pokemon.imgUrl
                                     }
                                 }}>
-                                    <img className="photo__img photo__img-shadow photo__img-medium photo__img--scaled"
-                                         src={pokemon.imgUrl} alt={pokemon.name}/>
+                                    <figure className="photo">
+                                        <img className="photo__img photo__img-shadow photo__img-medium photo__img--scaled"
+                                             src={pokemon.imgUrl} alt={pokemon.name}/>
+                                    </figure>
+
                                 </Link>
-                            </figure>
-                        </div>
-                    ))}
+                            </div>
+                        ))}
+                    </div>
                 </div>
         )
     }
