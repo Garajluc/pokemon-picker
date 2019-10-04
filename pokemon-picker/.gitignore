@@ -1,8 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
+node_modules
+./.pnp
 .pnp.js
 
 # testing
@@ -23,9 +23,9 @@ yarn-debug.log*
 yarn-error.log*
 
 # othes
-.idea
+../.idea
 
 # css
-./src/App.scss/App.css
-./src/App.scss/App.css.map
+/src/App.scss/App.css
+/src/App.scss/App.css.map
 
