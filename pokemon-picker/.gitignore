@@ -23,6 +23,9 @@ yarn-debug.log*
 yarn-error.log*
 
 # css
-/src/App.css
+/src/App.scss
 /src/App.css.map
+/src/.sass-cache/
 
+# other
+../.idea
