@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import PokemonDetails from "./PokemonDetails";
-import PokemonList from "./PokemonList";
+import PokemonDetails from "../PokemonDetails";
+import PokemonList from "../PokemonList";
 
 class App extends React.Component {
     render() {
