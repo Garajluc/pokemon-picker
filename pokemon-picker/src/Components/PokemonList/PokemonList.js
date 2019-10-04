@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function PokemonBox({pokemons}) {
+function PokemonList({pokemons}) {
 
     return pokemons.map((pokemon, index) => (
         <div className="section-list__item" key={index}>
@@ -21,4 +21,4 @@ function PokemonBox({pokemons}) {
     ))
 }
 
-export default PokemonBox;
+export default PokemonList;
