@@ -12,7 +12,7 @@ class PokemonDetails extends Component {
                         <FontAwesomeIcon className="btn__icon" icon={faChevronLeft}/>Back
                     </button>
                 </nav>
-                <div className="section__header">
+                <div className="section-header">
                     <h2>{state.name}</h2>
                 </div>
                 <figure className="photo">
