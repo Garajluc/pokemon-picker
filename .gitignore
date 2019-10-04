@@ -28,4 +28,4 @@ yarn-error.log*
 /src/.sass-cache/
 
 # other
-../.idea
+/.idea
