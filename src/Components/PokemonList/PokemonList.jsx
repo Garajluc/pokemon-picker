@@ -26,36 +26,9 @@ class PokemonList extends Component {
         });
     }
 
-    // renderLoadingScreen() {
-    //     const { isLoading } = this.state;
-    //
-    //     if(!isLoading) {
-    //         return null;
-    //     }
-    //
-    //     return <LoadScreen />;
-    // }
-    //
-    // renderList() {
-    //     const { isLoading } = this.state;
-    //
-    //     if(isLoading) {
-    //         return null;
-    //     }
-    //
-    //     return (
-    //         <div className="section">
-    //             ...
-    //             ...
-    //         </div>
-    //     );
-    // }
-
     render() {
         const { pokemons } = this.state;
 
-        // {this.renderLoadingScreen()}
-        // {this.renderList()}
         return (
             this.state.isLoading ? (
                 <LoadScreen />
