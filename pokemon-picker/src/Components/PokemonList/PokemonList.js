@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LoadScreen from "../LoadScreen/LoadScreen";
+import LoadScreen from "../LoadScreen";
 
 class PokemonList extends React.Component {
 
@@ -58,7 +58,6 @@ class PokemonList extends React.Component {
                                         <img className="photo__img photo__img-shadow photo__img-medium photo__img--scaled"
                                              src={pokemon.imgUrl} alt={pokemon.name}/>
                                     </figure>
-
                                 </Link>
                             </div>
                         ))}
